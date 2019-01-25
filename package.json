@@ -1,0 +1,40 @@
+{
+  "name": "shop-admin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wfwl/shop-admin.git",
+  "author": "wangwenfeng <499007631@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "dist": "webpack-cli -p"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "regenerator-runtime": "^0.13.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "4.2.2"
+  }
+}
