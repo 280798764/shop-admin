@@ -1,7 +1,6 @@
 # dependencies
 .DS_Store
 /node_modules
-/dist
 #ide
 .vscode
 .project
