@@ -107,7 +107,7 @@ class ProductList extends React.Component {
       {
         name: '操作',
         width: '15%'
-      },
+      }
     ]
     return (
       <div id="page-wrapper">

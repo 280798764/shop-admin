@@ -20,12 +20,12 @@ let menuList = [
     }]
   },
   {
-    path: '/order',
+    path: '/order/index',
     name: '订单中心',
     isOpen: true,
     icon: 'fa fa-check-square-o fa-fw',
     subMenu: [{
-      path: '/order',
+      path: '/order/index',
       name: '订单管理'
     }]
   },

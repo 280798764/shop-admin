@@ -8,6 +8,7 @@ import Login from 'page/login/index.jsx'
 import Home from 'page/home/index.jsx'
 import User from 'page/user/index.jsx'
 import Order from 'page/order/index.jsx'
+import OrderDetail from 'page/order/detail.jsx'
 import ProductRouter from 'page/product/router.jsx'
 import ErrorPage from 'page/error/index.jsx'
 
@@ -18,7 +19,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/user" component={User} />
-          <Route path="/order" component={Order} />
+          <Route path="/order/index" component={Order} />
+          <Route path="/order/detail/:orderNumber" component={OrderDetail} />
           <Route path="/product" component={ProductRouter} />
           <Route path="/product-category" component={ProductRouter} />
           <Route component={ErrorPage} />
