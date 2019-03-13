@@ -7,7 +7,7 @@ class Utils {
         type: parmas.type || 'get',
         dataType: parmas.dataType || 'json',
         data: parmas.data || null,
-        success(res) {
+        success: res => {
           if (0 === res.status) {
             resolve(res.data, res.msg)
           } else if (10 === res.status) {
@@ -16,7 +16,7 @@ class Utils {
             reject(res.msg)
           }
         },
-        error(err) {
+        error: err => {
           reject(err.statusText)
         }
       })

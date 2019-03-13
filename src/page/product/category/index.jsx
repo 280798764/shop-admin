@@ -4,36 +4,27 @@ import _mm from 'utils/utils.jsx'
 import _user from 'service/user-service.jsx'
 
 import PageTitle from 'component/page-title/index.jsx'
-import Pagination from 'component/pagination/index.jsx'
 import TableList from 'component/table-list/index.jsx'
 
-class User extends React.Component {
+class CateGoryList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       list: [],
-      pageNum: 1
+      parentCategoryId: this.props.match.params.categoryId || 0
     }
   }
   componentDidMount() {
-    this.loadUserList()
+    this.loadCateGoryList()
   }
   loadUserList() {
-    _user.getUserList(this.state.pageNum).then(res => {
+    _user.loadCateGoryList(this.state.parentCategoryId).then(res => {
       this.setState(res)
     }, rej => {
       this.setState({
         list: []
       })
       alert(rej)
-    })
-  }
-
-  onPageChange(pageNum) {
-    this.setState({
-      pageNum: pageNum
-    }, () => {
-      this.loadUserList()
     })
   }
 
@@ -44,8 +35,6 @@ class User extends React.Component {
           <td>{item.id}</td>
           <td>{item.username}</td>
           <td>{item.email}</td>
-          <td>{item.phone}</td>
-          <td>{new Date(item.createTime).toLocaleString()}</td>
         </tr>
       )
     })
@@ -58,10 +47,10 @@ class User extends React.Component {
     return (
       <div id="page-wrapper">
         <PageTitle title="用户列表" />
-        <TableList tableHeads={['ID', '用户名', '邮箱', '电话', '注册时间']}>{ tableBody }</TableList>
+        <TableList tableHeads={['品类ID', '品类名称', '操作']}>{ tableBody }</TableList>
         <Pagination current={this.state.pageNum} total={this.state.total} onChange={(pageNum) => { this.onPageChange(pageNum) }} />
       </div>)
   }
 }
 
-export default User
+export default CateGoryList

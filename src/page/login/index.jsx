@@ -10,7 +10,7 @@ class Login extends React.Component {
     this.state = {
       username: '',
       password: '',
-      redirect: _mm.getUrlParmas('redirect') || '/'
+      redirect: '/'
     }
   }
   onInputChange(e) {
