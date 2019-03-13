@@ -15,7 +15,7 @@ let menuList = [
       path: '/product',
       name: '商品管理'
     }, {
-      path: '/product-classify',
+      path: '/product-category',
       name: '品类管理'
     }]
   },

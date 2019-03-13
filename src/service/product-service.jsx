@@ -54,6 +54,21 @@ class Product {
       }
     })
   }
+  // 修改品类
+  updateCategoryName (category) {
+    return _mm.request({
+      type: 'post',
+      url:'/manage/category/set_category_name.do',
+      data: category
+    })
+  }
+  saveCategory (category) {
+    return _mm.request({
+      type: 'post',
+      url:'/manage/category/add_category.do',
+      data: category
+    })
+  }
   // 保存商品检查表单
   checkProduct(product) {
     let result = {

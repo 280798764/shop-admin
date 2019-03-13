@@ -20,6 +20,7 @@ class App extends React.Component {
           <Route path="/user" component={User} />
           <Route path="/order" component={Order} />
           <Route path="/product" component={ProductRouter} />
+          <Route path="/product-category" component={ProductRouter} />
           <Route component={ErrorPage} />
         </Switch>
       </Layout>
