@@ -2,12 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const WEBPACK_EVN = process.env.WEBPACK_EVN || 'development'
+console.log(WEBPACK_EVN)
+
 module.exports = {
-  mode: 'development',
+  mode: WEBPACK_EVN,
   entry: './src/app.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath: WEBPACK_EVN === 'development' ? '/dist/' : '//wfiwl.zicp.vip',
     filename: 'js/app.js'
   },
   // 提取公共代码
