@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/app.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: WEBPACK_EVN === 'development' ? '/dist/' : '//le23985711.zicp.vip',
+    publicPath: WEBPACK_EVN === 'development' ? '/dist/' : '//le23985711.zicp.vip/shop-admin/dist',
     filename: 'js/app.js'
   },
   // 提取公共代码
